@@ -559,7 +559,7 @@ var Widgets = {
             showinmedia:0,
 			showinsakaigoodies:1,
 			//hasSettings: 1,
-			img:"/dev/img/myprofile.png"
+			img:"/devwidgets/poll/images/poll.png"
         },
 		Resources :
 		{
