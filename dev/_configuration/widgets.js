@@ -546,6 +546,21 @@ var Widgets = {
 			showinsakaigoodies:1,
 			img:"/devwidgets/tangler/images/tangler.png"
 		},
+        basiclti :
+        {
+			description:"Basic LTI Widget\r\n",
+			iframe:0,
+			url:"/devwidgets/basiclti/basiclti.html",
+			name:"Basic LTI",
+			id:"basiclti",
+			personalportal:0,
+			siteportal:0,
+			ca:1,
+            showinmedia:0,
+			showinsakaigoodies:1,
+			//hasSettings: 1,
+			img:"/dev/img/myprofile.png"
+        },
 		Resources :
 		{
 			description:"Resources tool",
