@@ -17,7 +17,7 @@ ${foo} - ${bar}
 <label for="ltiurl">URL: </label><input type="text" name="ltiurl" value="${ltiurl}" /><br />
 
 <label for="xml_settings">XML BLOB: </label><br />
-<textarea name="xml_settings"></textarea>
+<textarea name="xml_settings">${xml_settings}</textarea>
 
 <label for="ltikey">Key: </label>
 <input type="text" name="ltikey" value="${ltikey}" /><br />
@@ -29,13 +29,13 @@ ${foo} - ${bar}
 <input type="text" name="frame_height" value="${frame_height}" /><br />
 
 <label for="debug">Debug: </label>
-<input type="checkbox" name="debug" /><br />
+<input type="checkbox" name="debug" {if debug}checked="checked"{/if} /><br />
 
 <label for="release_names">Release Names: </label>
-<input type="checkbox" name="release_names" /><br />
+<input type="checkbox" name="release_names" {if release_names}checked="checked"{/if} /><br />
 
 <label for="custom_params">Custom Params: </label><br />
-<textarea name="custom_params"></textarea>
+<textarea name="custom_params">${custom_params}</textarea>
 <br />
 <button name="save_settings">Save Settings</button>
 </form>
