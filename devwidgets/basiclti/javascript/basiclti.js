@@ -63,6 +63,8 @@ sakai.basiclti = function(tuid,placement,showSettings){
                     frame_height: $('[name=frame_height]', rootel).val(),
                     debug: $('[name=debug]:checked', rootel).length == 1,
                     release_names: $('[name=release_names]:checked', rootel).length == 1,
+                    release_principal_name: $('[name=release_principal_name]:checked', rootel).length == 1,
+                    release_email: $('[name=release_email]:checked', rootel).length == 1,
                     custom_params: $('[name=custom_params]', rootel).val(),
                     xml_settings: $('[name=xml_settings]', rootel).val()
                 };
@@ -147,6 +149,8 @@ sakai.basiclti = function(tuid,placement,showSettings){
             //launch_presentation_height: 800,
             debug: false,
             release_names: false,
+            release_principal_name: false,
+            release_email: false,
             xml_settings: '',
             custom_params: ''
         };
