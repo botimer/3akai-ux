@@ -63,6 +63,7 @@ sakai.createsite = function(tuid,placement,showSettings){
     var createSiteOption = createSite + "_option";
     var createSiteOptionCourse = createSiteOption + "_course";
     var createSiteOptionNoncourse = createSiteOption + "_noncourse";
+    var createSiteOptionPortfolio = createSiteOption + "_eport";
 
 
     ///////////////////////
@@ -289,6 +290,13 @@ sakai.createsite = function(tuid,placement,showSettings){
      * Show the noncourse window
      */
     $(createSiteOptionNoncourse).bind("click", function(ev){
+        showCourse(false);
+    });
+
+    /*
+     * Show the portfolio window (currently same as noncourse)
+     */
+    $(createSiteOptionPortfolio).bind("click", function(ev){
         showCourse(false);
     });
 
