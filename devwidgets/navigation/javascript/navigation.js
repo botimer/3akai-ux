@@ -40,14 +40,11 @@ sakai.navigation = function(tuid, showSettings){
 
     // Template
     var navigationOutputTemplate = navigationName + "_output_template";
-    var navigationSkinOrigTemplate = navigationName + "_skin_orig_template";
-    var navigationSkinClearTemplate = navigationName + "_skin_clear_template";
+    var navigationSkinDefaultTemplate = navigationName + "_skin_default_template";
+    var navigationSkinCustomTemplate = navigationName + "_skin_custom_template";
 
     // Hierachy
     start_level = 3; // The URL depth where the displayed hierarchy should start (currently after "/sites")
-
-    //Current skin
-    var skin = "original";
 
     ///////////////////////
     // Utility functions //
@@ -296,12 +293,6 @@ sakai.navigation = function(tuid, showSettings){
             }
 
         });
-        // Render the skin template
-        if (skin == "clear") {
-            $(navigationSkin,rootel).html($.Template.render(navigationSkinClearTemplate,jsonNavigation));
-        } else {
-            $(navigationSkin,rootel).html($.Template.render(navigationSkinOrigTemplate,jsonNavigation));
-        }
 
         // Store a reference to the tree navigation object
         sakai.site.navigation.treeNav = $.tree.reference("#nav_content");
@@ -328,6 +319,17 @@ sakai.navigation = function(tuid, showSettings){
     } else {
         $(navigationSettings,rootel).hide();
         $(navigationOutput,rootel).show();
+    }
+
+    // Render the skin template
+    var styleData = Config.Site.Styles[sakai.site.currentsite.style] || {};
+    styleData.brackethack = "<";
+
+    if (styleData && styleData.navigationCss) {
+        $(navigationSkin,rootel).html($.Template.render(navigationSkinCustomTemplate, styleData));
+    }
+    else {
+        $(navigationSkin,rootel).html($.Template.render(navigationSkinDefaultTemplate, styleData));
     }
 
     // Render navigation when navigation widget is loaded

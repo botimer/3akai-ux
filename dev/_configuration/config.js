@@ -134,7 +134,9 @@ sakai.config = {
             clear : {
                 name : "Clear sakai theme",
                 image : "_images/sakai_grey.png",
-                URL : "/dev/_skins/clear/clear.html"
+                URL : "/dev/_skins/clear/clear.html",
+                navigationMode: "portfolio",
+                navigationCss: "/dev/_skins/clear/css/clear_navigation.css"
             },
             camuniversity : {
                 name : "Cambridge University theme",
