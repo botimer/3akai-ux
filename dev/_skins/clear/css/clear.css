@@ -1,0 +1,307 @@
+/*
+ * Licensed to the Sakai Foundation (SF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The SF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations under the License.
+ */
+
+/* THINGS CHANGED TO WORK IN SAKAI 3 */
+
+html {
+	background: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;	
+	font-size: 1em;
+}
+
+.content p {
+	font-size: 1.1em;
+}
+
+table {
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size: 1.1em;
+	border: none;
+}
+/* hiding/changing Sakai navigation */
+.explore_nav ul.explore li {
+	padding: 0;
+}
+
+.explore_nav ul.explore li.explore_nav_selected {
+	border-left: none;
+}
+
+.explore_nav .personal-container {
+	display: none;
+}
+
+#genaral_search_container {
+	display: none;
+}
+
+#chat_main_container {
+	display: none !important;
+}
+.sakai_site .sakai_site_contents_main {
+	border: none;
+}
+
+#title-input-container {
+	margin-bottom: 10px;
+}
+.portfolio_page_content td, .portfolio_page_content th {
+	border: none;
+}
+#portfolio_logo {
+	float: left;
+	width: 400px;
+	height: 60px;
+  background-image: url(/dev/_skins/clear/images/logo.gif);
+	background-repeat: no-repeat;
+}
+
+#portfolio_primary_navigation {
+	width: auto;
+	/*padding: 5px;*/
+	/* Changed for Sakai 3 */
+	padding: 0;
+	margin: 0;
+	border-bottom: 3px solid #3569A1;
+	font-size: 13px;
+}
+
+#portfolio_primary_navigation ul li a#navigation_page_selected {
+	color: #FFFFFF;
+	background-color: #3569A1;
+	background-image: none;
+}
+
+div.navigation div.nav_content
+{ border-left: none; border-right: none; padding: 10px 5px 5px 5px; margin: 0; }
+
+div.navigation div.nav_content li a.rootpage
+{ background-image: none; }
+
+#siterecentactivity_output {
+	display: none !important;
+}
+
+.nav_titlebar, .nav_bottom {
+	display: none;
+}
+
+#page_nav_content p {
+	margin: 0;
+	padding: 0;
+}
+
+/* THINGS THAT ARE IDENTICAL IN BOTH SAKAI 2 AND 3 (Except paths in URLs) */
+
+
+
+
+#xEditingArea {
+	border: 1px dashed #666666;
+}
+
+#currentlyEditingPage_1234 table {
+	width: 100%;
+}
+
+#portfolio_wrapper {
+	width: 980px;
+	margin: auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#portfolio_splash {
+	height: 60px !important; /* Match the logo height for this layout */
+	text-align: right;
+}
+
+#portfolio_participant_name {
+	font-weight: bold;
+	font-size: 1.6em;
+	color: #333333;
+	padding: 0;
+	margin-top: 3px;
+	margin-bottom: 0px;
+	text-align: right;
+}
+
+#portfolio_title {
+	font-style: italic;
+	padding-top: 3px;
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: serif;
+	color: #333333;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: right;
+}
+
+
+
+#portfolio_primary_navigation ul
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+#portfolio_primary_navigation ul li { display: inline; }
+
+#portfolio_primary_navigation ul li a
+{
+	text-decoration: none;
+	padding: .2em 1em;
+	color: #3569A1;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+
+
+#portfolio_primary_navigation ul li a.active:hover {
+	color: #fff;
+	background-color: #3569A1;
+}
+
+
+#portfolio_primary_navigation ul li a:hover
+{
+	color: #FFFFFF;
+	background-color: #3569A1;
+}
+
+
+
+#portfolio_secondary_navigation {
+  width: 225px;
+  float: left;
+  line-height: 140%;
+  margin-top: 18px;
+	text-align: left;
+	padding: 5px;
+}
+
+#portfolio_secondary_navigation a {
+  display:block;
+  text-decoration: none;     
+}
+
+#portfolio_secondary_navigation a:hover {
+  text-decoration: underline;
+}
+
+#portfolio_secondary_navigation ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+
+#portfolio_secondary_navigation ul.subnav_list li.active {
+	list-style-image: url(/dev/_skins/clear/images/li.gif);
+}
+
+#portfolio_secondary_navigation ul {
+  padding-left: 2.0em;
+}
+
+div.portfolio_page_content {
+  margin-top: 14px;
+	text-align: left;
+	padding: 5px;
+}
+
+div.portfolioPage {
+	clear: left;
+}
+
+div.examplePage {
+	float: left;
+	margin-left: 20px;
+	width: 715px;
+}
+
+div.hidden_block {
+	position: fixed;
+	display: none;
+	width: 1px;
+	height: 1px;
+	top: 1px;
+}
+
+#portfolio_footer {
+	clear: left;
+  font-size: 10px;
+  color: #999;
+  text-align: left;
+}
+
+h1 {
+	font-size: 16px;
+	color: #333333;
+}
+h2 {
+	font-size: 14px;
+	color: #333333;
+     
+}
+h3 {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 3px;
+}
+h4 {
+  font-size: 12px;
+  color: #333;
+  margin: 3px;
+  font-weight: normal;
+  font-style: italic;
+}
+#resume h2 {
+	margin-top: 0px;
+}
+#resume ul {
+	margin-top: 0px;
+}
+img {
+  border: 0px;
+}
+a {
+	color: #3569A1;
+	text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.active {
+  text-decoration: underline;
+     
+}
+ul li {
+  list-style-image: url(/dev/_skins/clear/images/li.gif);
+}
+
+
