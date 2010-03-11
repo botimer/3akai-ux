@@ -36,13 +36,18 @@ sakai.navigation = function(tuid, placement, showSettings){
     var navigationName = "navigation";
     var navigationOutput = navigation + "_output";
     var navigationSettings = navigation + "_settings";
+    var navigationSkin = navigation + "_skin";
 
     // Template
     var navigationOutputTemplate = navigationName + "_output_template";
+    var navigationSkinOrigTemplate = navigationName + "_skin_orig_template";
+    var navigationSkinClearTemplate = navigationName + "_skin_clear_template";
 
     // Hierachy
     start_level = 3; // The URL depth where the displayed hierarchy should start (currently after "/sites")
 
+    //Current skin
+    var skin = "original";
 
     ///////////////////////
     // Utility functions //
@@ -291,6 +296,12 @@ sakai.navigation = function(tuid, placement, showSettings){
             }
 
         });
+        // Render the skin template
+        if (skin == "clear") {
+            $(navigationSkin,rootel).html($.Template.render(navigationSkinClearTemplate,jsonNavigation));
+        } else {
+            $(navigationSkin,rootel).html($.Template.render(navigationSkinOrigTemplate,jsonNavigation));
+        }
 
         // Store a reference to the tree navigation object
         sakai.site.navigation.treeNav = $.tree.reference("#nav_content");
