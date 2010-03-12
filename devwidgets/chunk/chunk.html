@@ -1,7 +1,9 @@
-<link rel="stylesheet" href="loads" />
+<h3>Here is a top level link that loads (check head)</h3>
+<link rel="stylesheet" href="top-level-loads" />
+
 <div id="uncommented_link">
-    <h3>Next is a literal, uncommented link from within the widget HTML, which does not render.</h3>
-    <link rel="stylesheet" href="blah" />
+    <h3>Next is a literal, uncommented link from within the widget HTML, which loads.</h3>
+    <link rel="stylesheet" href="inside-div-loads" />
 </div>
 
 <div id="comment_link_container">
@@ -11,11 +13,11 @@
 <div id="batch_results" style="border: 1px solid black; width: 800px;"></div>
 
 <div id="comment_link_template"><!--
-    <h3>This h3 is in a commented template and will show, but the next link tag will not.</h3>
+    <h3>This h3 is in a commented template and will show, but the next link tag will not have its variable expanded.</h3>
     <link rel="stylesheet" href="${foo}" />
-    <h3>It is also not affected by variable expansion, leading, or trailing markup. The next link tag has no variables, but does not show.</h3>
-    <link rel="stylesheet" href="null" />
-    <h3>You may want to inspect $('#comment_link_template').get(0).firstChild.data, which will show the omissions.</h3>
+    <h3>The next link tag is also in the template, but has no variable expansion, and it loads.</h3>
+    <link rel="stylesheet" href="literal-in-comment-loads" />
+    <h3>You may want to inspect $('#comment_link_template').get(0).firstChild.data, which will show the omissions that make expansion impossible.</h3>
 --></div>
 
 <script type="text/javascript" src="/devwidgets/chunk/javascript/chunk.js"></script>
