@@ -213,6 +213,12 @@ var Widgets = {
             name:"navigationchat",
             url:"/devwidgets/navigationchat/navigationchat.html"
         },
+        chunk: {
+            description:"chunk",
+            id:"chunk",
+            name:"chunk",
+            url:"/devwidgets/chunk/chunk.html"
+        },
         poll: {
             ca:true,
             description:"Poll widget",

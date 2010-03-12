@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="loads" />
+<div id="uncommented_link">
+    <h3>Next is a literal, uncommented link from within the widget HTML, which does not render.</h3>
+    <link rel="stylesheet" href="blah" />
+</div>
+
+<div id="comment_link_container">
+</div>
+
+<h2>Results of batch get to this file</h2>
+<div id="batch_results" style="border: 1px solid black; width: 800px;"></div>
+
+<div id="comment_link_template"><!--
+    <h3>This h3 is in a commented template and will show, but the next link tag will not.</h3>
+    <link rel="stylesheet" href="${foo}" />
+    <h3>It is also not affected by variable expansion, leading, or trailing markup. The next link tag has no variables, but does not show.</h3>
+    <link rel="stylesheet" href="null" />
+    <h3>You may want to inspect $('#comment_link_template').get(0).firstChild.data, which will show the omissions.</h3>
+--></div>
+
+<script type="text/javascript" src="/devwidgets/chunk/javascript/chunk.js"></script>
