@@ -544,6 +544,7 @@ sakai.site.site_admin = function(){
 
         // Switch to edit view
         $("#show_view_container").hide();
+        $(".show_view_container").hide();
         $("#edit_view_container").show();
 
         if (sakai.site.isEditingNavigation){
@@ -630,6 +631,7 @@ sakai.site.site_admin = function(){
                     // Switch back view
                     $("#edit_view_container").hide();
                     $("#show_view_container").show();
+                    $(".show_view_container").show();
                 }
             });
 
@@ -651,6 +653,7 @@ sakai.site.site_admin = function(){
             // Switch back to view mode
             $("#edit_view_container").hide();
             $("#show_view_container").show();
+            $(".show_view_container").show();
 
         }
     };
@@ -783,6 +786,7 @@ sakai.site.site_admin = function(){
                                     // Switch back to view mode
                                     $("#edit_view_container").hide();
                                     $("#show_view_container").show();
+                                    $(".show_view_container").show();
                                 }
                             });
                         } else {
@@ -792,6 +796,7 @@ sakai.site.site_admin = function(){
                             // Switch back to view mode
                             $("#edit_view_container").hide();
                             $("#show_view_container").show();
+                            $(".show_view_container").show();
                         }
 
                     } else {
@@ -819,6 +824,7 @@ sakai.site.site_admin = function(){
                 // Switch back to view mode
                 $("#edit_view_container").hide();
                 $("#show_view_container").show();
+                $(".show_view_container").show();
 
                 $("#" + sakai.site.selectedpage).show();
                 sdata.widgets.WidgetLoader.insertWidgets(sakai.site.selectedpage,null,sakai.site.currentsite.id + "/_widgets/");
@@ -870,6 +876,7 @@ sakai.site.site_admin = function(){
 
         $("#edit_view_container").hide();
         $("#show_view_container").show();
+        $(".show_view_container").show();
 
         sdata.widgets.WidgetLoader.insertWidgets("page_nav_content",null,sakai.site.currentsite.id + "/_widgets/");
 
