@@ -61,30 +61,59 @@
         <div id="widget_navigationchat" class="widget_inline">
         </div>
         <!-- HEADER -->
-        <!-- HIDE HEADER (SEARCH AND SITE TITLE) -->
-        <div style="display: none">
-            <div class="fl-container-flex header">
-                <div class="fl-fix fl-centered fixed-container">
-                    <div class="decor">
-                        <!-- -->
-                    </div>
-                    <!-- SEARCH -->
-                    <div class="search_container">
-                        <form class="search_form buttonBar fl-force-right" id="search_form" action="" method="post" onsubmit="return false;">
-                            <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" />
-                            <button id="search_filed_button" class="s3d-button s3d-search-button s3d-button-primary">
-                                <span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span>
-                            </button>
-                            <br class="fl-push" />
-                        </form>
-                    </div>
-                    <!-- TITLE BAR  -->
-                    <div class="site_heading fl-force-left">
-                        <h1 id="sitetitle"></h1>
-                    </div>
+        
+        <div class="fl-container-flex header">
+            <div class="fl-fix fl-centered fixed-container">
+                <!--<div class="decor">-->
+                    <!-- -->
+                <!--</div>-->
+                <!-- SEARCH AND PORTFOLIO-LEVEL EDITING -->
+                <div class="search_container">
+                    <div class="portfolio_level_options" id="portfolio_level_options" style="display:inline;">
+                            <ul>
+                                <li>
+                                    <a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Sharing</a>
+                                </li>
+                                <li>
+                                    <a id="site_management_basic_link_permissions" href="/dev/site_management_basic_settings.html?siteid=">Permissions</a>
+                                </li>
+                                <li>
+                                    <a id="site_management_basic_link_skin" href="/dev/site_management_basic_settings.html?siteid=">Skin</a>
+                                </li>
+                                <li>
+                                    
+                                        <a id="option_blank_page" href="javascript:;">Add Page</a>
+                                        <!--<ul>
+                                            <li id="option_blank_page">
+                                                <a href="javascript:;">Blank Page</a>
+                                            </li>
+                                            <li id="option_page_from_template">
+                                                <a href="javascript:;">Page from Template</a>
+                                            </li>
+                                        </ul>-->
+                                    
+                                </li>
+                                <li>
+                                    <a href="javascript:;" id="tag_portfolio">Tag Portfolio</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    <form class="search_form buttonBar fl-force-right" id="search_form" action="" method="post" onsubmit="return false;">
+                        <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" />
+                        <button id="search_filed_button" class="s3d-button s3d-search-button s3d-button-primary">
+                            <span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span>
+                        </button>
+                        <br class="fl-push" />
+                    </form>
                 </div>
+                <!-- TITLE BAR  -->
+                <!--<div class="site_heading fl-force-left">
+                    <h1 id="sitetitle"></h1>
+                </div>-->
             </div>
-        </div><!-- END HIDING HEADER -->
+        </div>
+        
         <div id="portfolio_wrapper">
             <!-- CONTENT -->
             <div class="fl-fix fl-centered fixed-container">
@@ -137,7 +166,7 @@
                                 <li>
                                     <a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Site Settings</a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <div class="add_new_menu" id="add_new_menu">
                                         <a href="javascript:;">Add Page</a>
                                         <ul>
@@ -149,7 +178,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a href="javascript:;" id="print_page">Print page</a>
                                 </li>
@@ -159,7 +188,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div><!-- End portfolio_header -->
                 
                 <div id="portfolio_page_body">
                     <div class="portfolio_page_content portfolioPage">

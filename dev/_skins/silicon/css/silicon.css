@@ -27,6 +27,29 @@ body {
 	font-size: 1em;
 }
 
+.header .fixed-container {
+    background-image: none;
+}
+
+#portfolio_level_options ul {
+    background: url("/dev/_images/tab_bg_left.png") no-repeat scroll left top #FFFFFF;
+    color: red;
+}
+
+#portfolio_level_options li {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    
+}
+
+#portfolio_level_options li a {
+    padding: 5px;
+}
+
+.sakai_site .content_page_options {
+    margin-bottom: 5px;
+}
 .content p {
 	font-size: 1.1em;
 }
@@ -46,16 +69,19 @@ table {
 }
 
 .explore_nav .personal-container {
-	display: none;
+	background-image: none;
 }
 
+.explore_nav .personal {
+	background-image: none;
+}
 .sakai_site .add_new_menu#add_new_menu {
 	position: static;
 }
 
 /* Note misspelling: genaral for general */
 #genaral_search_container {
-	display: none;
+	/*display: none;*/
 }
 
 #chat_main_container {
