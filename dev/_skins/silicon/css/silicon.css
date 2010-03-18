@@ -31,8 +31,11 @@ body {
     background-image: none;
 }
 
+.show_view_container {
+    margin-bottom: 5px;
+}
 #portfolio_level_options ul {
-    background:  #FFFFFF url("/dev/_images/tab_bg_left.png") no-repeat top left;
+    background:  #FFFFFF url("/dev/_images/portfolio_tab_bg_left.png") no-repeat top left;
 }
 
 #portfolio_level_options li {
@@ -46,6 +49,15 @@ body {
     padding: 5px;
 }
 
+.sakai_site .content_page_options {
+    background: #FFFFFF url("/dev/_images/portfolio_tab_bg_right.png") no-repeat scroll right top;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sakai_site .content_page_options ul {
+    background: #FFFFFF url("/dev/_images/portfolio_tab_bg_left.png") no-repeat scroll left top;
+}
 #edit_tooltip {
     color: #055089; 
     background-color: #d6d8df; 
@@ -58,9 +70,7 @@ body {
     -webkit-border-radius: 5px;
 }
 
-.sakai_site .content_page_options {
-    margin-bottom: 5px;
-}
+
 .content p {
 	font-size: 1.1em;
 }
@@ -173,6 +183,7 @@ table {
 	width: 980px;
 	margin: auto;
 	font-family: Arial, Helvetica, sans-serif;
+    color: red;
 }
 
 
@@ -373,7 +384,7 @@ a.active {
   text-decoration: underline;
      
 }
-#portfolio_page_body ul li {
+#portfolio_page_body ul li, #tinymce.mceContentBody ul li {
   list-style-image: url(/dev/_skins/silicon/images/li.gif)
 }
 
