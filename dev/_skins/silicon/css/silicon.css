@@ -32,8 +32,7 @@ body {
 }
 
 #portfolio_level_options ul {
-    background: url("/dev/_images/tab_bg_left.png") no-repeat scroll left top #FFFFFF;
-    color: red;
+    background:  #FFFFFF url("/dev/_images/tab_bg_left.png") no-repeat top left;
 }
 
 #portfolio_level_options li {
@@ -45,6 +44,18 @@ body {
 
 #portfolio_level_options li a {
     padding: 5px;
+}
+
+#edit_tooltip {
+    color: #055089; 
+    background-color: #d6d8df; 
+    font-weight: bold; 
+    font-size: 1.5em; 
+    line-height: 2.2em; 
+    padding: 7px;
+    border: 1px solid #d6d8df; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
 }
 
 .sakai_site .content_page_options {
