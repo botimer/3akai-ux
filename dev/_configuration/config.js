@@ -66,7 +66,7 @@ var Config = {
         SITE_PRINT_URL: "/dev/print.html?pagetitle=__CURRENTSITENAME__",
         SITE_URL: "/dev/site.html",
         SITE_URL_SITEID: "/dev/site.html?siteid=__SITEID__",
-        TINY_MCE_CONTENT_CSS: "/dev/_css/FSS/fss-base.css,/dev/_css/sakai/sakai.core.2.css,/dev/_css/sakai/sakai.css,/dev/_css/sakai/sakai.editor.css,/dev/_skins/silicon/css/silicon.css",
+        TINY_MCE_CONTENT_CSS: "/dev/_css/FSS/fss-base.css,/dev/_css/sakai/sakai.core.2.css,/dev/_css/sakai/sakai.css,/dev/_css/sakai/sakai.editor.css",
         UPLOAD_URL: "/_user/files.upload.json",
         WEBDAV_PRIVATE_URL: "/webdav/_private",
 

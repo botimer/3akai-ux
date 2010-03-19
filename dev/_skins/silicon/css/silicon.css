@@ -106,7 +106,7 @@ table {
 }
 
 #chat_main_container {
-	display: none !important;
+	/*display: none !important;*/
 }
 .sakai_site .sakai_site_contents_main {
 	border: none;
@@ -183,7 +183,6 @@ table {
 	width: 980px;
 	margin: auto;
 	font-family: Arial, Helvetica, sans-serif;
-    color: red;
 }
 
 

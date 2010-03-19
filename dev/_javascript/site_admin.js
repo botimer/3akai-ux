@@ -35,6 +35,7 @@ sakai.site.site_admin = function(){
     sakai.site.oldSelectedPage = false;
     sakai.site.mytemplates = false;
     sakai.site.showingInsertMore = false;
+    sakai.site.portfolioPreviewMode = false;
     sakai.site.showPortfolioEditHint = true;
 
     // Cache all the jQuery selectors we can
@@ -274,7 +275,8 @@ sakai.site.site_admin = function(){
             init_instance_callback: "sakai.site.startEditPage",
 
             // Example content CSS (should be your site CSS)
-            content_css: Config.URL.TINY_MCE_CONTENT_CSS,
+            //content_css: Config.URL.TINY_MCE_CONTENT_CSS,
+            content_css: Config.URL.TINY_MCE_CONTENT_CSS + ",/dev/_skins/" + sakai.site.currentsite.style + "/css/" + sakai.site.currentsite.style + ".css",
 
             // Drop lists for link/image/media/template dialogs
             template_external_list_url: "lists/template_list.js",
@@ -962,7 +964,39 @@ sakai.site.site_admin = function(){
     };
 
 
+    //--------------------------------------------------------------------------------------------------------------
+    //
+    // PORTFOLIO PREVIEW
+    //
+    //--------------------------------------------------------------------------------------------------------------
 
+    /**
+     * Hides Sakai navigationchat and editing toolbars
+     */
+    $("#preview_link").click(function() {
+        $("#navigationchatcontainer").hide();
+        $(".header").hide();
+        $("#content_page_options").hide();
+        $("#chat_main_container").hide();
+        sakai.site.portfolioPreviewMode = true;
+    });
+    
+    $("#portfolio_header").hover(function(){
+        if (sakai.site.portfolioPreviewMode == true) {
+            $(this).prepend("<span id='preview_hint' css='position: fixed; top: 0; right: 0; background-color: silver;'>Click in header to exit Preview Mode</span>");
+            setTimeout('$("#preview_hint").hide("slow");', 7000);
+        }
+    });
+    
+    $("#portfolio_header").click(function(){
+        if (sakai.site.portfolioPreviewMode == true) {
+            $("#navigationchatcontainer").show();
+            $(".header").show();
+            $("#content_page_options").show();
+            $("#chat_main_container").show();
+            sakai.site.portfolioPreviewMode = false;
+        } 
+    });
 
     //--------------------------------------------------------------------------------------------------------------
     //
