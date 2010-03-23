@@ -69,6 +69,7 @@ sakai.createsite = function(tuid,placement,showSettings){
     var createSiteOptionNoncourse = createSiteOption + "_noncourse";
     var createSiteOptionPortfolio = createSiteOption + "_eport";
 
+    var createSiteType = "noncourse";
 
     ///////////////////////
     // Utility functions //
@@ -226,7 +227,8 @@ sakai.createsite = function(tuid,placement,showSettings){
                 "name" : sitetitle,
                 "description" : sitedescription,
                 "id" : siteid,
-                "sakai:site-template" : "/templates/" + sitetemplate
+                "sakai:site-template" : "/templates/" + sitetemplate,
+                "sakai:site-type": createSiteType
             },
             type: "POST",
             success: function(data, textStatus){
@@ -306,6 +308,7 @@ sakai.createsite = function(tuid,placement,showSettings){
      * Show the course window
      */
     $(createSiteOptionCourse).bind("click", function(ev){
+        createSiteType = "course";
         showCourse();
     });
 
@@ -313,6 +316,7 @@ sakai.createsite = function(tuid,placement,showSettings){
      * Show the noncourse window
      */
     $(createSiteOptionNoncourse).bind("click", function(ev){
+        createSiteType = "noncourse";
         showNoncourse();
     });
 
@@ -320,6 +324,7 @@ sakai.createsite = function(tuid,placement,showSettings){
      * Show the portfolio window
      */
     $(createSiteOptionPortfolio).bind("click", function(ev){
+        createSiteType = "portfolio";
         showPortfolio();
     });
 
