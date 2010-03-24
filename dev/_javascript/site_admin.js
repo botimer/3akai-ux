@@ -978,14 +978,17 @@ sakai.site.site_admin = function(){
         $(".header").hide();
         $("#content_page_options").hide();
         $("#chat_main_container").hide();
+        $("#preview_exit").show();
         sakai.site.portfolioPreviewMode = true;
     });
     
-    $("#portfolio_header").hover(function(){
-        if (sakai.site.portfolioPreviewMode == true) {
-            $(this).prepend("<span id='preview_hint' css='position: fixed; top: 0; right: 0; background-color: silver;'>Click in header to exit Preview Mode</span>");
-            setTimeout('$("#preview_hint").hide("slow");', 7000);
-        }
+    $("#preview_exit").click(function(){
+        $("#navigationchatcontainer").show();
+        $(".header").show();
+        $("#content_page_options").show();
+        $("#chat_main_container").show();
+        $("#preview_exit").hide();
+        sakai.site.portfolioPreviewMode = false;
     });
     
     $("#portfolio_header").click(function(){
@@ -994,6 +997,7 @@ sakai.site.site_admin = function(){
             $(".header").show();
             $("#content_page_options").show();
             $("#chat_main_container").show();
+            $("#preview_exit").hide();
             sakai.site.portfolioPreviewMode = false;
         } 
     });

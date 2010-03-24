@@ -57,95 +57,153 @@
         </script>
     </head>
     <body id="root" class="fl-centered fl-container sakai_site i18nable">
+        
+                <img id="preview_exit" style="display:none;" src="/dev/_images/portfolio_preview_exit.png" alt="Click to exit preview" />
         <!-- EXPLORE BAR -->
         <div id="widget_navigationchat" class="widget_inline">
         </div>
         <!-- HEADER -->
-        <!-- HIDE HEADER (SEARCH AND SITE TITLE) -->
-        <div style="display: none">
-            <div class="fl-container-flex header">
-                <div class="fl-fix fl-centered fixed-container">
-                    <div class="decor">
-                        <!-- -->
-                    </div>
-                    <!-- SEARCH -->
-                    <div class="search_container">
-                        <form class="search_form buttonBar fl-force-right" id="search_form" action="" method="post" onsubmit="return false;">
-                            <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" />
-                            <button id="search_filed_button" class="s3d-button s3d-search-button s3d-button-primary">
-                                <span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span>
-                            </button>
-                            <br class="fl-push" />
-                        </form>
-                    </div>
-                    <!-- TITLE BAR  -->
-                    <div class="site_heading fl-force-left">
-                        <h1 id="sitetitle"></h1>
-                    </div>
+        
+        <div class="fl-container-flex header">
+            <div class="fl-fix fl-centered fixed-container">
+                <!--<div class="decor">-->
+                    <!-- -->
+                <!--</div>-->
+                <!-- SEARCH AND PORTFOLIO-LEVEL EDITING -->
+                <div class="search_container">
+                    <div class="portfolio_level_options" id="portfolio_level_options" style="display:inline;">
+                            <ul>
+                                <li>
+                                    <a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Site Settings</a>
+                                </li>
+                                <li>
+                                    <li><a id="site_management_appearance_link" href="/dev/site_management_appearance.html?siteid=">Select Skin</a></li>
+                                </li>
+                                <li>
+                                    <a id="site_management_members_link" href="/dev/site_management_members_manage.html?siteid=">Sharing</a>
+                                </li>
+                                <li>
+                                    
+                                        <a id="option_blank_page" href="javascript:;">Add Page</a>
+                                        <!--<ul>
+                                            <li id="option_blank_page">
+                                                <a href="javascript:;">Blank Page</a>
+                                            </li>
+                                            <li id="option_page_from_template">
+                                                <a href="javascript:;">Page from Template</a>
+                                            </li>
+                                        </ul>-->
+                                    
+                                </li>
+                                <li>
+                                    <a href="javascript:;" id="tag_portfolio_link">Tag Portfolio</a>
+                                </li>
+                                <li>
+                                    <a id="preview_link" href="javascript:;">Preview</a>
+                                </li>
+                            </ul>
+                        </div>
+                    <form class="search_form buttonBar fl-force-right" id="search_form" action="" method="post" onsubmit="return false;">
+                        <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" />
+                        <button id="search_filed_button" class="s3d-button s3d-search-button s3d-button-primary">
+                            <span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span>
+                        </button>
+                        <br class="fl-push" />
+                    </form>
                 </div>
+                <!-- TITLE BAR  -->
+                <!--<div class="site_heading fl-force-left">
+                    <h1 id="sitetitle"></h1>
+                </div>-->
             </div>
         </div>
-        <!-- END HIDING HEADER -->
+        
         <div id="portfolio_wrapper">
-        <!-- CONTENT -->
-        <div class="fl-fix fl-centered fixed-container">
-            <!-- MAIN PAGE -->
-            <div id="portfolio_header">
-                <div id="portfolio_logo">
-                </div>
-                <div id="portfolio_splash">
-                    <div id="portfolio_participant_name">
-                        Participant Name
+            <!-- CONTENT -->
+            <div class="fl-fix fl-centered fixed-container">
+                <!-- MAIN PAGE -->
+                <div id="portfolio_header">
+                    <div id="portfolio_logo">
                     </div>
-                    <div id="portfolio_title">
-                        <!-- PAGE TITLE -->
-                        <div id="pagetitle">
+                    <div id="portfolio_splash">
+                        <div id="portfolio_participant_name">
+                            Participant Name
+                        </div>
+                        <div id="portfolio_title">
+                            <!-- PAGE TITLE -->
+                            <div id="pagetitle">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-                <!-- Page Nav -->
-                <div>
-                    <!--<div class="add_a_new_container">
+                    <!-- Page Nav -->
+                    <div>
+                        <!--<div class="add_a_new_container">
                         <a class="add_a_new" id="add_a_new" style="display:none" href="javascript:;">Add a New ...</a>
-                    </div>-->
-                    <!-- Page navigation -->
-                    <div id="portfolio_primary_navigation">
-                        <div id="page_nav_content" class="pages page_nav_content">
+                        </div>--><!-- Page navigation -->
+                        <div id="portfolio_primary_navigation">
+                            <div id="page_nav_content" class="pages page_nav_content">
+                            </div>
+                        </div>
+                        <!-- Site Management --><!--<div class="site_management" id="site_management" style="display:none">
+                        <div class="sm_titlebar">
+                        <div class="sm_titlebar_inner"><h2 class="sm_title">Site Management</h2></div>
+                        </div>
+                        <div class="sm_content">
+                        <ul>
+                        <li><a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Site Settings</a></li>--><!-- <li><a id="site_management_files_link" href="/dev/content_media.html?siteid=">Site Files</a></li> --><!--<li><a id="site_management_members_link" href="/dev/site_management_members_manage.html?siteid=">Members</a></li>
+                        <li><a id="site_management_appearance_link" href="/dev/site_management_appearance.html?siteid=">Appearance</a></li>
+                        <li><a href="javascript:;" id="edit_sidebar">Edit Sidebar</a></li>
+                        </ul>
+                        </div>
+                        <div class="sm_bottom">
+                        <div class="sm_bottom_inner"></div>
+                        </div>
+                        </div>-->
+                    </div>
+                    <!-- TOP RIGHT MENU -->
+                    <div class="show_view_container">
+                        <div class="content_page_options" id="content_page_options">
+                            <ul class="fl-force-right">
+                                <!--<li id="li_edit_page" style="display:none">
+                                    <a href="javascript:;" id="edit_page">__MSG__EDIT_PAGE__</a>
+                                </li>-->
+                                
+                                <!--<li>
+                                    <div class="add_new_menu" id="add_new_menu">
+                                        <a href="javascript:;">Add Page</a>
+                                        <ul>
+                                            <li id="option_blank_page">
+                                                <a href="javascript:;">Blank Page</a>
+                                            </li>
+                                            <li id="option_page_from_template">
+                                                <a href="javascript:;">Page from Template</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>-->
+                                <li id="more_revision_history" class="more_option" style="border-bottom:1px solid #CCCCCC">
+                                    <a href="javascript:;">Revision History</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" id="print_page">Print page</a>
+                                </li>
+                                <li id="more_move" class="more_option move_dialog_trigger">
+                                    <a href="javascript:;">Move</a>
+                                </li>
+                                <li id="more_save_as_template" class="more_option">
+                                    <a href="javascript:;">Save as Template</a>
+                                </li>
+                                <li id="more_delete" class="more_option">
+                                    <a href="javascript:;">Delete</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Tag Page</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- Site Management --><!--<div class="site_management" id="site_management" style="display:none">
-                    <div class="sm_titlebar">
-                    <div class="sm_titlebar_inner"><h2 class="sm_title">Site Management</h2></div>
-                    </div>
-                    <div class="sm_content">
-                    <ul>
-                    <li><a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Site Settings</a></li>--><!-- <li><a id="site_management_files_link" href="/dev/content_media.html?siteid=">Site Files</a></li> --><!--<li><a id="site_management_members_link" href="/dev/site_management_members_manage.html?siteid=">Members</a></li>
-                    <li><a id="site_management_appearance_link" href="/dev/site_management_appearance.html?siteid=">Appearance</a></li>
-                    <li><a href="javascript:;" id="edit_sidebar">Edit Sidebar</a></li>
-                    </ul>
-                    </div>
-                    <div class="sm_bottom">
-                    <div class="sm_bottom_inner"></div>
-                    </div>
-                    </div>-->
-                </div>
-                <!-- TOP RIGHT MENU -->
-				<div class="show_view_container">
-	                <div class="content_page_options" id="content_page_options">
-	                    <ul class="fl-force-right">
-	                        <li id="li_edit_page" style="display:none">
-	                            <a href="javascript:;" id="edit_page">__MSG__EDIT_PAGE__</a>
-	                        </li>
-	                        <li>
-	                            <a href="javascript:;" id="print_page">Print page</a>
-	                        </li>
-	                        <li>
-	                            <a href="javascript:;" id="more_link">More</a>
-	                        </li>
-	                    </ul>
-	                </div>
-				</div>
+                </div><!-- End portfolio_header -->
+                
                 <div id="portfolio_page_body">
                     <div class="portfolio_page_content portfolioPage">
                         <!-- MAIN CONTENT -->
@@ -153,7 +211,7 @@
                             <div class="content_container">
                                 <!-- TOP BORDER -->
                                 <!--<div class="content_top">
-                                    <div class="content_top_inner"></div>
+                                <div class="content_top_inner"></div>
                                 </div>-->
                                 <div class="sakai_site_contents_main fl-fix">
                                     <!-- REVISION HISTORY -->
@@ -192,7 +250,8 @@
                                     <!-- MAIN CONTENT -->
                                     <div id="main-content-div">
                                     </div>
-                                    <!-- DASHBOARD PAGES  --><!-- CONTENT -->
+                                    <!-- DASHBOARD PAGES  -->
+                                    <!-- CONTENT -->
                                     <div id="dashboard_container_template"><!--
                                         <div class="fl-col-flex${size} sakai_dashboard_page">
                                         {var index = 0}
@@ -412,7 +471,7 @@
                                     </button>
                                     <span class="messageInformation" id="messageInformation" style="display:none">Auto saved at <span id="realtime"></span></span>
                                 </div>
-								<div class="title_input_container" id="title-input-container">
+                                <div class="title_input_container" id="title-input-container">
                                     <input type="text" value="Untitled" class="title-input" id="title-input"/>
                                 </div>
                                 <!-- TAB NAVIGATION -->
@@ -445,7 +504,6 @@
                                     </div>
                                     <!-- EDIT CONTENTS -->
                                     <div class="edit_contents_main">
-                                        
                                         <div class="fl-tab-content-border fl-tab-content-editor" id="fl-tab-content-editor">
                                             <div id="placeholderforeditor" class="textarea">
                                                 <!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
@@ -475,12 +533,13 @@
                                         <div class="content_bottom_inner">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                </div><!-- end edit_container -->
+                            </div><!-- end main_container -->
+                        </div><!-- end edit_view_container -->
+                    </div><!-- end portfolio_page_content -->
                 </div>
-            </div>
+                <div id="portfolio_footer">&#160;</div>
+            </div><!-- end fixed_container -->
         </div><!-- END PORTFOLIO_WRAPPER -->
         <!-- FOOTER WIDGET -->
         <!--<div id="widget_footer_footercontainer" class="widget_inline footercontainer"></div>-->
@@ -506,25 +565,25 @@
             </td>
             -->
         </div>
-        <div class="add_new_menu" id="add_new_menu" style="display:none">
-            <ul>
-                <li id="option_blank_page">
-                    <a href="javascript:;">Blank Page</a>
-                </li>
-                <li id="option_page_from_template">
-                    <a href="javascript:;">Page from Template</a>
-                </li>
-                <li id="option_page_dashboard">
-                    <a href="javascript:;">Dashboard Page</a>
-                </li>
-            </ul>
-        </div>
+        <!--<div class="add_new_menu" id="add_new_menu" style="display:none">
+        <ul>
+        <li id="option_blank_page">
+        <a href="javascript:;">Blank Page</a>
+        </li>
+        <li id="option_page_from_template">
+        <a href="javascript:;">Page from Template</a>
+        </li>
+        <li id="option_page_dashboard">
+        <a href="javascript:;">Dashboard Page</a>
+        </li>
+        </ul>
+        </div>-->
         <div class="add_more_menu" id="more_menu" style="display:none">
             <ul>
                 <li id="more_settings" class="more_option">
                     <a href="javascript:;">Permissions</a>
                 </li>
-                <li id="more_revision_history" class="more_option" style="border-bottom:1px solid #CCCCCC">
+                <!--<li id="more_revision_history" class="more_option" style="border-bottom:1px solid #CCCCCC">
                     <a href="javascript:;">Revision History</a>
                 </li>
                 <li id="more_move" class="more_option move_dialog_trigger">
@@ -535,7 +594,7 @@
                 </li>
                 <li id="more_delete" class="more_option">
                     <a href="javascript:;">Delete</a>
-                </li>
+                </li>-->
             </ul>
         </div>
         <div id="insert_more_menu" class="insert_more_menu" style="display:none">
@@ -836,7 +895,8 @@
                         <input type="submit" value="Add" class="button button-default" /><input type="button" value="Cancel" class="button jqmClose" />
                     </div>
                 </form>
-            </div><!-- DIALOG FOOTER -->
+            </div>
+            <!-- DIALOG FOOTER -->
             <div class="dialog_footer">
                 <div class="dialog_footer_inner">
                     <!-- -->

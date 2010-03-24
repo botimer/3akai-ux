@@ -27,6 +27,13 @@ body {
 	font-size: 1em;
 }
 
+#preview_exit {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    border: 0;
+}
+
 .header .fixed-container {
     background-image: none;
 }
