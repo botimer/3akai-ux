@@ -27,6 +27,57 @@ body {
 	font-size: 1em;
 }
 
+#preview_exit {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    border: none;
+}
+
+.header .fixed-container {
+    background-image: none;
+}
+
+.show_view_container {
+    margin-bottom: 5px;
+}
+
+#portfolio_level_options ul {
+    background:  #FFFFFF url("/dev/_images/portfolio_tab_bg_left.png") no-repeat top left;
+}
+
+#portfolio_level_options li {
+    list-style-type: none;
+    display: inline;
+    float: left;
+    
+}
+
+#portfolio_level_options li a {
+    padding: 5px;
+}
+
+.sakai_site .content_page_options {
+    background: #FFFFFF url("/dev/_images/portfolio_tab_bg_right.png") no-repeat scroll right top;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sakai_site .content_page_options ul {
+    background: #FFFFFF url("/dev/_images/portfolio_tab_bg_left.png") no-repeat scroll left top;
+}
+#edit_tooltip {
+    color: #055089; 
+    background-color: #d6d8df; 
+    font-weight: bold; 
+    font-size: 1.5em; 
+    line-height: 2.2em; 
+    padding: 7px;
+    border: 1px solid #d6d8df; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+}
+
 .content p {
 	font-size: 1.1em;
 }
@@ -46,7 +97,11 @@ table {
 }
 
 .explore_nav .personal-container {
-	display: none;
+	background-image: none;
+}
+
+.explore_nav .personal {
+	background-image: none;
 }
 
 .sakai_site .add_new_menu#add_new_menu {
@@ -54,11 +109,11 @@ table {
 }
 
 #genaral_search_container {
-	display: none;
+	/*display: none;*/
 }
 
 #chat_main_container {
-	display: none !important;
+	/*display: none !important;*/
 }
 .sakai_site .sakai_site_contents_main {
 	border: none;
@@ -95,7 +150,11 @@ table {
 }
 
 div.navigation div.nav_content
-{ border-left: none; border-right: none; padding: 10px 5px 5px 5px; margin: 0; }
+{ 
+    border-left: none; 
+    border-right: none; 
+    padding: 10px 5px 5px 5px; 
+    margin: 0; }
 
 div.navigation div.nav_content li a.rootpage
 { background-image: none; }
@@ -156,6 +215,7 @@ div.navigation div.nav_content li a.rootpage
 #portfolio_wrapper {
 	width: 980px;
 	margin: auto;
+    margin-top: 15px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
