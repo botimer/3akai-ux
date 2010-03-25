@@ -36,7 +36,6 @@ sakai.site.site_admin = function(){
     sakai.site.mytemplates = false;
     sakai.site.showingInsertMore = false;
     sakai.site.portfolioPreviewMode = false;
-    sakai.site.showPortfolioEditHint = true;
 
     // Cache all the jQuery selectors we can
     var $main_content_div = $("#main-content-div");
@@ -909,31 +908,6 @@ sakai.site.site_admin = function(){
         return false;
     });
     
-    // Bind Edit Page to double click event on #portfolio_page_body
-    $("#portfolio_page_body").bind("dblclick", function(ev){
-        sakai.site.isEditingNewPage = false;
-        sakai.site.inEditView = true;
-
-        //Check if tinyMCE has been loaded before - probably a more robust check will be needed
-        if (tinyMCE.activeEditor === null) {
-            init_tinyMCE();
-        } else {
-            editPage(sakai.site.selectedpage);
-        }
-
-        return false;
-    });
-    
-    // Bind edit tooltip to #portfolio_page_body mouseenter event
-    $("#portfolio_page_body").bind("mouseenter", function(ev){        
-        if (sakai.site.inEditView != true) {
-            if (sakai.site.showPortfolioEditHint == true) {
-                $("#portfolio_page_body").prepend("<span id='edit_tooltip'>Double click text to edit page</span>");
-                setTimeout('$("#edit_tooltip").hide("slow")', 7000);
-                sakai.site.showPortfolioEditHint = false;
-            }
-        }
-    });
 
 
     // Bind cancel button click
