@@ -64,20 +64,20 @@
         </div>
         <!-- HEADER -->
         
-        <div class="fl-container-flex header">
-            <div class="fl-fix fl-centered fixed-container">
+        <div class="fl-container-flex header fl-centered" style="width: 1050px;">
+            <div class="fl-fix fixed-container" style="width: 740px;">
                 <!--<div class="decor">-->
                     <!-- -->
                 <!--</div>-->
                 <!-- SEARCH AND PORTFOLIO-LEVEL EDITING -->
-                <div class="search_container">
+                <div class="search_container" >
                     <div class="portfolio_level_options" id="portfolio_level_options" style="display:inline;">
                             <ul>
                                 <li>
                                     <a id="site_management_basic_link" href="/dev/site_management_basic_settings.html?siteid=">Site Settings</a>
                                 </li>
                                 <li>
-                                    <li><a id="site_management_appearance_link" href="/dev/site_management_appearance.html?siteid=">Select Skin</a></li>
+                                    <li><a id="site_management_appearance_link" href="/dev/site_management_appearance.html?siteid=">Select Theme</a></li>
                                 </li>
                                 <li>
                                     <a id="site_management_members_link" href="/dev/site_management_members_manage.html?siteid=">Sharing</a>
@@ -104,7 +104,7 @@
                             </ul>
                         </div>
                     <form class="search_form buttonBar fl-force-right" id="search_form" action="" method="post" onsubmit="return false;">
-                        <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" />
+                        <input type="text" name="search" value="Search this site" id="search_filed" class="search_field" style=" width: 217px;" />
                         <button id="search_filed_button" class="s3d-button s3d-search-button s3d-button-primary">
                             <span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span>
                         </button>
@@ -163,10 +163,10 @@
                     <!-- TOP RIGHT MENU -->
                     <div class="show_view_container">
                         <div class="content_page_options" id="content_page_options">
-                            <ul class="fl-force-right">
-                                <!--<li id="li_edit_page" style="display:none">
+                            <ul class="fl-force-left">
+                                <li id="li_edit_page" style="display:none">
                                     <a href="javascript:;" id="edit_page">__MSG__EDIT_PAGE__</a>
-                                </li>-->
+                                </li>
                                 
                                 <!--<li>
                                     <div class="add_new_menu" id="add_new_menu">
@@ -181,23 +181,20 @@
                                         </ul>
                                     </div>
                                 </li>-->
-                                <li id="more_revision_history" class="more_option" style="border-bottom:1px solid #CCCCCC">
-                                    <a href="javascript:;">Revision History</a>
+                                <li id="more_revision_history">
+                                    <a href="javascript:;">Editing History</a>
                                 </li>
-                                <li>
-                                    <a href="javascript:;" id="print_page">Print page</a>
-                                </li>
-                                <li id="more_move" class="more_option move_dialog_trigger">
-                                    <a href="javascript:;">Move</a>
-                                </li>
-                                <li id="more_save_as_template" class="more_option">
+                                <li id="more_save_as_template">
                                     <a href="javascript:;">Save as Template</a>
                                 </li>
-                                <li id="more_delete" class="more_option">
-                                    <a href="javascript:;">Delete</a>
+                                <li>
+                                    <a href="javascript:;">Tag</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">Tag Page</a>
+                                    <a href="javascript:;" id="print_page">Print</a>
+                                </li>
+                                <li id="more_delete">
+                                    <a href="javascript:;">Delete</a>
                                 </li>
                             </ul>
                         </div>
