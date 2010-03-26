@@ -64,7 +64,35 @@
         </div>
         <!-- HEADER -->
         
-        <div class="fl-container-flex header">
+        <script type="text/javascript">
+            /*
+            function blargh() {
+                $('#portfolio_magic').slideToggle();
+                $('#genaral_search_container').hide();
+                $('#portfolio_magic').hide();
+            }
+            $(document).ready(function() {
+                $('#portfolio_magic').css({border: "1px solid grey"});
+            });
+            */
+            /*
+            $(document).ready(function() {
+            $('#ARGH').click(function() { alert('argh!'); });
+            });
+            $('#root .header:first').hide();
+            $("#blarghbutton").click(function() {
+                alert('ouch');
+                $('#root .header:first').slideToggle();
+                return false;
+            });
+            */
+        </script>
+        <!--
+        <div style="position: absolute; top:20px; left:20px; width: 20px; height: 20px; background: yellow; border: 1px solid black">
+        <a style="width:100%; height:100%; display: block" href="#" onclick="blargh(); return false;" id="blarghbutton">Edit</a>
+        </div>
+        -->
+        <div id="portfolio_magic" class="fl-container-flex header">
             <div class="fl-fix fl-centered fixed-container">
                 <!--<div class="decor">-->
                     <!-- -->
@@ -115,6 +143,50 @@
                 <!--<div class="site_heading fl-force-left">
                     <h1 id="sitetitle"></h1>
                 </div>-->
+
+                    <div class="show_view_container">
+                        <div class="content_page_options" id="content_page_options">
+                            <ul class="fl-force-right">
+                                <!--<li id="li_edit_page" style="display:none">
+                                    <a href="javascript:;" id="edit_page">__MSG__EDIT_PAGE__</a>
+                                </li>-->
+                                
+                                <!--<li>
+                                    <div class="add_new_menu" id="add_new_menu">
+                                        <a href="javascript:;">Add Page</a>
+                                        <ul>
+                                            <li id="option_blank_page">
+                                                <a href="javascript:;">Blank Page</a>
+                                            </li>
+                                            <li id="option_page_from_template">
+                                                <a href="javascript:;">Page from Template</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>-->
+                                <li id="more_revision_history" class="more_option" style="border-bottom:1px solid #CCCCCC">
+                                    <a href="javascript:;">Revision History</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" id="print_page">Print page</a>
+                                </li>
+                                <li id="more_move" class="more_option move_dialog_trigger">
+                                    <a href="javascript:;">Move</a>
+                                </li>
+                                <li id="more_save_as_template" class="more_option">
+                                    <a href="javascript:;">Save as Template</a>
+                                </li>
+                                <li id="more_delete" class="more_option">
+                                    <a href="javascript:;">Delete</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Tag Page</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
             </div>
         </div>
         
@@ -161,50 +233,36 @@
                         </div>-->
                     </div>
                     <!-- TOP RIGHT MENU -->
-                    <div class="show_view_container">
-                        <div class="content_page_options" id="content_page_options">
-                            <ul class="fl-force-right">
-                                <!--<li id="li_edit_page" style="display:none">
-                                    <a href="javascript:;" id="edit_page">__MSG__EDIT_PAGE__</a>
-                                </li>-->
-                                
-                                <!--<li>
-                                    <div class="add_new_menu" id="add_new_menu">
-                                        <a href="javascript:;">Add Page</a>
-                                        <ul>
-                                            <li id="option_blank_page">
-                                                <a href="javascript:;">Blank Page</a>
-                                            </li>
-                                            <li id="option_page_from_template">
-                                                <a href="javascript:;">Page from Template</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>-->
-                                <li id="more_revision_history" class="more_option" style="border-bottom:1px solid #CCCCCC">
-                                    <a href="javascript:;">Revision History</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" id="print_page">Print page</a>
-                                </li>
-                                <li id="more_move" class="more_option move_dialog_trigger">
-                                    <a href="javascript:;">Move</a>
-                                </li>
-                                <li id="more_save_as_template" class="more_option">
-                                    <a href="javascript:;">Save as Template</a>
-                                </li>
-                                <li id="more_delete" class="more_option">
-                                    <a href="javascript:;">Delete</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">Tag Page</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div><!-- End portfolio_header -->
                 
                 <div id="portfolio_page_body">
+<!--
+<div id="portfolio_secondary_navigation">
+<ul id="secondary_nav_list">
+<li>Child's Hope Internship<ul class="subnav_list">
+<li>
+<a href="#examplePage_3b6c804a-0670-4147-93e3-d501baf5cbfa">Hopes and Dreams Fundraiser event</a>
+</li>
+<li>
+<a href="#examplePage_1f98a91d-8d20-4492-92c1-b8388e928779">My work for the internship</a>
+</li>
+<li>
+<a href="#examplePage_79b87ad0-ef7c-4629-8672-2665f23c7570">Right to Thrive Summit 2009</a>
+</li>
+<li>
+<a href="#examplePage_ef7e3780-b07e-4ca6-9262-e5ba37ba73e0">Trainings I have been involved in</a>
+</li>
+</ul>
+</li>
+<li>Professional Development<ul class="subnav_list">
+<li>
+<a href="#examplePage_477c41f5-3321-46b3-a9fe-60455af1f8e3">Becoming the teacher I am Today</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+-->
                     <div class="portfolio_page_content portfolioPage">
                         <!-- MAIN CONTENT -->
                         <div class="fl-fix  main_container show_view_container" id="show_view_container">
