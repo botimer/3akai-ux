@@ -213,6 +213,12 @@ var Widgets = {
             name:"navigationchat",
             url:"/devwidgets/navigationchat/navigationchat.html"
         },
+        interactionpanel: {
+            description:"Detailed Interaction Panel",
+            id:"interactionpanel",
+            name:"Detailed Interaction",
+            url:"/devwidgets/interactionpanel/interactionpanel.html"
+        },
         poll: {
             ca:true,
             description:"Poll widget",

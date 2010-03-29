@@ -1755,6 +1755,7 @@ sakai.navigationchat = function(tuid, placement, showSettings){
     }
     else {
         sdata.widgets.WidgetLoader.insertWidgets("chat_container");
+        sdata.widgets.WidgetLoader.insertWidgets("interactionpanel");
     }
 
 

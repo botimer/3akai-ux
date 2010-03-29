@@ -7,11 +7,14 @@
         function slidenav() {
             $('#navopen').toggle();
             $('#navclosed').toggle();
+            $('#edittoggler').animate({width: 'toggle'});
             $('#explore_nav_container .explore li.others').animate({width: 'toggle'});
         }
 
         function hidem() {
             $('#genaral_search_container').hide();
+            $('#edittoggler').animate({width: 'toggle'});
+            //$('#edittoggler').show();
             $('#portfolio_magic').hide();
             $('#portfolio_magic').css('border', '1px solid gray');
             $('#portfolio_magic').css('position', 'relative');
@@ -19,19 +22,20 @@
             $('#portfolio_magic').css('background', '#ccc');
             $('#portfolio_magic').css('z-index', '12');
             $('#nav_courses_sites_link').removeClass('explore_nav_selected');
-            $('#explore_nav_container').css('z-index', '40000');
-            $('#explore_nav_container .explore_nav_selected').css('z-index', '40001');
+            $('#explore_nav_container').css('z-index', '10000');
+            $('#explore_nav_container .explore_nav_selected').css('z-index', '10001');
         }
         function ouch() {
-            $('#portfolio_magic').slideToggle();
+            //$('#portfolio_magic').slideToggle();
             $('#edittoggler').toggleClass('explore_nav_selected');
+            $('#interaction_panel_container').slideToggle();
         }
 
         </script>
         
         <ul class="explore">
-            <li id="edittoggler"><a id="editarrow" href="#" onclick="ouch(); return false;">Edit</a></li>
-            <li id="navtoggler"><a id="navarrow" href="#" onclick="slidenav(); return false;"><span id="navclosed" style="display: none">Navigate &gt;</span><span id="navopen">&lt;</span></a></li>
+            <li id="navtoggler"><a id="navarrow" href="#" onclick="slidenav(); return false;"><span id="navclosed" style="display: none">Navigate</span><span id="navopen">&lt; Back</span></a></li>
+            <li id="edittoggler"><a id="editarrow" href="#" onclick="ouch(); return false;">Interact</a></li>
             <li class="others" id="nav_my_sakai_link"><a href="/dev/my_sakai.html">__MSG__MY_SAKAI__</a></li>
             <li class="others" id="nav_content_media_link"><a href="javascript:;" style="color: #888;">__MSG__CONTENT_AND_MEDIA__</a></li>
             <li class="others" id="nav_people_link" class="chat_has_dropdown nav_people_link"><a href="/dev/people.html">__MSG__PEOPLE__</a></li>
@@ -122,6 +126,8 @@
         <br class="clear"/>
     </form>
 </div>
+
+<div id="widget_interactionpanel" class="widget_inline"></div>
 
 <div id="chat_available_template" style="display:none"><!--
     <a href="javascript:;" id="chat_available_minimize">
